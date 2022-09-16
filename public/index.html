@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site de valentin le BG</title>
     <style>
-        html, body  {
-            margin: 0;
-        }
+      html,
+      body {
+        margin: 0;
+      }
       .trololo {
         background-image: url(/images/cringe.png);
         background-size: cover;
@@ -17,7 +18,15 @@
       }
     </style>
   </head>
+  <div id="app"></div>
+  <script src="https://unpkg.com/webamp"></script>
+  <script defer>
+    const app = document.getElementById('winamp');
+    const webamp = new Webamp();
+    webamp.renderWhenReady(app);
+  </script>
   <body>
     <div class="trololo"></div>
+    <div id="winamp"></div>
   </body>
 </html>
