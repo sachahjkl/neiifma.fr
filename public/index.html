@@ -25,9 +25,26 @@
     <div class="trololo"></div>
     <div id="winamp"></div>
   </body>
-    <script defer>
-    const app = document.getElementById('winamp');
-    const webamp = new Webamp();
-    webamp.renderWhenReady(app);
+  <script defer>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const app = document.getElementById('winamp');
+        const webamp = new Webamp({
+          initialTracks: [
+            {
+              metaData: {
+                artist: 'The Seatbelts',
+                title: ' Rush (Cowboy Bebop)',
+              },
+              url: '/rush.mp3',
+            },
+          ],
+        });
+
+        // Returns a promise indicating when it's done loading.
+        await webamp.renderWhenReady(app);
+        // webamp.nextTrack();
+        webamp.play();
+
+    });
   </script>
 </html>
