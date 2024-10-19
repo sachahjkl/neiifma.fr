@@ -1,9 +1,0 @@
-name: "neiifma.fr"
-description: "Le site d'un énorme BG"
-topics:
-  []
-homepage: ""
-source:
-  provider: github
-  namespace: "sachahjkl"
-  path: "sachahjkl/neiifma.fr"
